@@ -1,5 +1,5 @@
 # from tasks import example1
-from tasks import homework1
+from tasks import task2
 
 if __name__ == "main":
-    print("Done")
+    task2

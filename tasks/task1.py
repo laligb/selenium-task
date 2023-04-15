@@ -2,6 +2,9 @@ from tasks.driver import *
 import time
 import os
 
+# Task # 1
+print("Task #1: cheking file uploading")
+
 # Check current URL:
 print(driver.current_url)
 driver.find_element(By.LINK_TEXT, "File Upload").click()
@@ -24,8 +27,6 @@ def upload_file(file_name):
 
     except:
         print("File does not exist in the path")
-
-
 
 
 # Successful upload testing
