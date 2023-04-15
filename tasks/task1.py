@@ -3,7 +3,7 @@ import time
 import os
 
 # Task # 1
-print("Task #1: cheking file uploading")
+print("Task #1: checking file uploading")
 
 # Check current URL:
 print(driver.current_url)
