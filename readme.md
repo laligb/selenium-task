@@ -1,6 +1,6 @@
 # SELENIUM TESTS
 
-## testing website: https://the-internet.herokuapp.com/
+## Testing website: https://the-internet.herokuapp.com/
 
 ### Run the test:
 ```
