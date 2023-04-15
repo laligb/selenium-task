@@ -1,6 +1,5 @@
 from tests.task1 import *
 from selenium.webdriver.support.select import Select
-from tqdm import tqdm
 
 print("---")
 print("Task # 2: checking dropdown ")
