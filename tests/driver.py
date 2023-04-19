@@ -18,7 +18,7 @@ webdriver_service = Service(f"{homedir}/chromedriver/stable/chromedriver")
 driver = webdriver.Chrome(service=webdriver_service, options=chrome_options)
 
 # Without WSL, by using windows:
-# driver = webdriver.Chrome(service=ChromeDriverManager().install())
+# driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
 # Get testing website
 driver.get("https://the-internet.herokuapp.com/")
