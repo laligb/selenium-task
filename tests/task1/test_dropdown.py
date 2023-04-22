@@ -1,4 +1,4 @@
-from tests.task1 import *
+from tests.task1.test_uploading import *
 from selenium.webdriver.support.select import Select
 
 print("---")
@@ -18,7 +18,6 @@ print("")
 print(selected)
 try:
     assert 'Option 2' in selected
-    time.sleep(5)
     print("selected correctly")
 except:
     print("Wrong selection")
@@ -32,7 +31,6 @@ try:
     print(driver.current_url)
     try:
         assert "https://the-internet.herokuapp.com/redirector" in driver.current_url
-        time.sleep(5)
         print("Correct redirection")
     except:
         print("incorrect redirection")

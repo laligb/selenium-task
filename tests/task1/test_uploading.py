@@ -20,7 +20,6 @@ def upload_file(file_name):
         driver.find_element(By.ID,"file-submit").submit()
         try:
             assert driver.page_source.find("File Uploaded!")
-            time.sleep(5)
             print("file upload success")
         except:
             print("file upload not successful")

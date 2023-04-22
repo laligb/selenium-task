@@ -1,8 +1,8 @@
 # from tasks import example1
-from tests import task2
+from tests.task1 import test_dropdown
 
 
 
 
 if __name__ == "main":
-    task2
+    test_dropdown
