@@ -13,12 +13,13 @@ chrome_options.add_argument("--headless") # Ensure GUI is off
 chrome_options.add_argument("--no-sandbox")
 
 # Set path to chromedriver as per your configuration
-homedir = os.path.expanduser("~")
-webdriver_service = Service(f"{homedir}/chromedriver/stable/chromedriver")
-driver = webdriver.Chrome(service=webdriver_service, options=chrome_options)
+# homedir = os.path.expanduser("~")
+# webdriver_service = Service(f"{homedir}/chromedriver/stable/chromedriver")
+# driver = webdriver.Chrome(service=webdriver_service, options=chrome_options)
 
 # Without WSL, by using windows:
-# driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+from webdriver_manager.chrome import ChromeDriverManager
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
 # Get testing website
 driver.get("https://the-internet.herokuapp.com/")
