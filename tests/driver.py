@@ -17,7 +17,7 @@ chrome_options.add_argument("--no-sandbox")
 # webdriver_service = Service(f"{homedir}/chromedriver/stable/chromedriver")
 # driver = webdriver.Chrome(service=webdriver_service, options=chrome_options)
 
-# Without WSL, by using windows:
+# Another option to use ChromDriverManager
 from webdriver_manager.chrome import ChromeDriverManager
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
