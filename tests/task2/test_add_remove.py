@@ -6,6 +6,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import unittest
+import allure
 
 class AddRemoveElements(unittest.TestCase):
     def setUp(self) -> None:
@@ -23,6 +24,11 @@ class AddRemoveElements(unittest.TestCase):
         finally:
             print("Setup finished.")
 
+    @allure.description("Finds element by Link Text and clicks")
+    @allure.severity(allure.severity_level.NORMAL)
+    @allure.title("Finds Link Text")
+    @allure.suite("grouped by Finding elements")
+    @allure.feature("Finding functionality")
     def test_add_remove_elements(self):
         print("testing start...")
 
