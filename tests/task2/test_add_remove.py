@@ -24,28 +24,56 @@ class AddRemoveElements(unittest.TestCase):
         finally:
             print("Setup finished.")
 
-    @allure.description("Finds element by Link Text and clicks")
-    @allure.severity(allure.severity_level.NORMAL)
-    @allure.title("Finds Link Text")
-    @allure.suite("grouped by Finding elements")
-    @allure.feature("Finding functionality")
+
     def test_add_remove_elements(self):
         print("testing start...")
-
+        print("Trying to enter on https://the-internet.herokuapp.com/add_remove_elements/")
         try:
-            # element = WebDriverWait(driver, 5).until\
-            #     (EC.presence_of_element_located(By.LINK_TEXT, "Add/Remove Elements"))
-            # el = WebDriverWait(self.driver, 5).until\
-            #      (EC.presence_of_element_located(By.LINK_TEXT, "Add/Remove Elements"))
-            # #print(driver.current_url)
-            # el.assertEqual(self.driver.current_url, "https://the-internet.herokuapp.com/add_remove_elements/")
-            # assert driver.page_source.find("Add/Remove Elements")
             self.driver.find_element(By.LINK_TEXT, "Add/Remove Elements").click()
+            print(self.driver.current_url)
+            self.assertEqual(self.driver.current_url, "https://the-internet.herokuapp.com/add_remove_elements/")
+            print("Done!")
+        except:
+            print("There is some problem with URL")
 
+        # Adding elements
+        print("Adding 10 elements...")
+        try:
+            for i in range(10):
+                self.driver.find_element(By.XPATH, '//button[normalize-space()="Add Element"]').click()
 
+            elements = self.driver.find_elements(By.XPATH, '//button[normalize-space()="Delete"]')
+            print(f"Amount of added elements: {len(elements)}")
+
+            # Assertion
+            try:
+                self.assertEqual(len(elements), 10)
+                print("Done!")
+            except:
+                print("assertion error")
 
         except:
-            print("ERROR")
+            print("There is problem with adding elements")
+
+
+        # Removing elements
+        print("Removing 7 element")
+
+        try:
+            for i in range(7):
+                self.driver.find_element(By.XPATH, '//button[normalize-space()="Delete"]').click()
+            remained_elements = self.driver.find_elements(By.XPATH, '//button[normalize-space()="Delete"]')
+            print(f"Amount of remained elements: {len(remained_elements)}")
+
+            # Assertion
+            try:
+                self.assertEqual(len(remained_elements), 3)
+                print("Done!")
+            except:
+                print("Assertion error")
+
+        except:
+            print("Problem with deleting elements")
 
 
 
@@ -53,9 +81,5 @@ class AddRemoveElements(unittest.TestCase):
         self.driver.close()
 
 
-if __name__ == "__main__":
-    unittest.main()
-
-
-# addrem = AddRemoveElements()
-# addrem.test_add_remove_elements()
+# if __name__ == "__main__":
+#     unittest.main()
