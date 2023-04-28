@@ -79,7 +79,3 @@ class AddRemoveElements(unittest.TestCase):
 
     def tearDown(self) -> None:
         self.driver.close()
-
-
-# if __name__ == "__main__":
-#     unittest.main()
