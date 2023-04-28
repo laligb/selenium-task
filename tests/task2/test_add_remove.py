@@ -46,11 +46,9 @@ class AddRemoveElements(unittest.TestCase):
             print(f"Amount of added elements: {len(elements)}")
 
             # Assertion
-            try:
-                self.assertEqual(len(elements), 10)
-                print("Done!")
-            except:
-                print("assertion error")
+
+            self.assertEqual(len(elements), 10)
+            print("Done!")
 
         except:
             print("There is problem with adding elements")
@@ -62,15 +60,13 @@ class AddRemoveElements(unittest.TestCase):
         try:
             for i in range(7):
                 self.driver.find_element(By.XPATH, '//button[normalize-space()="Delete"]').click()
+
             remained_elements = self.driver.find_elements(By.XPATH, '//button[normalize-space()="Delete"]')
             print(f"Amount of remained elements: {len(remained_elements)}")
 
             # Assertion
-            try:
-                self.assertEqual(len(remained_elements), 3)
-                print("Done!")
-            except:
-                print("Assertion error")
+            self.assertEqual(len(remained_elements), 3)
+            print("Done!")
 
         except:
             print("Problem with deleting elements")
