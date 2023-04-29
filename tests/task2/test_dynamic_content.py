@@ -58,5 +58,5 @@ class DynamicContent(unittest.TestCase):
     def tearDown(self) -> None:
         self.driver.close()
 
-if __name__ == "main":
-    unittest.main()
+# if __name__ == "main":
+#     unittest.main()
