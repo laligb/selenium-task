@@ -1,4 +1,4 @@
-from tests.driver import *
+from tests.task1.driver import *
 import time
 
 # Task # 1 from lesson:
