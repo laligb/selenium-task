@@ -25,7 +25,6 @@ class MainSteps(MainLocators):
     def file_upload(self, file_name):
         file_path = os.path.abspath(file_name)
         self.driver.find_element(*MainLocators.file_upload).send_keys(file_path)
-        time.sleep(2)
 
     @allure.step
     def file_submit(self):
