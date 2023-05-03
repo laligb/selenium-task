@@ -36,6 +36,13 @@ class MainSteps(MainLocators):
             self.assertEqual("0", word[-1])
 
 
+    def find_table_row_(self):
+        row = self.driver.find_element(*MainLocators.table_row)
+        split = row.text.split()[0:6]
+        print(split)
+        return split
+
+
 
 
 
