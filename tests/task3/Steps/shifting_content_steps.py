@@ -10,7 +10,6 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from selenium.webdriver.common.action_chains import ActionChains
-# element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.CLASS_NAME, "large-10")))
 
 class MainSteps(MainLocators):
     def __init__(self):
