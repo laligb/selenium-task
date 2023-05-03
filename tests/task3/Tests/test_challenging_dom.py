@@ -13,6 +13,7 @@ class TestChallengingDom(unittest.TestCase):
         MainSteps.setUp(self)
         MainSteps.go_to_challenging_dom(self)
         MainSteps.find_table_row(self)
+        MainSteps.tearDown(self)
 
         # ERROR NEEDS TO BE SOLVE
 

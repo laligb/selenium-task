@@ -18,6 +18,7 @@ class TestShiftingContent(unittest.TestCase):
         MainSteps.go_to_example2(self)
         MainSteps.click_and_check_image(self)
         MainSteps.position_check(self)
+        MainSteps.tearDown(self)
 
 
 if __name__ == "__main__":

@@ -14,7 +14,8 @@ class TestFileUpload(unittest.TestCase):
         MainSteps.go_to_fileupload(self)
         MainSteps.file_upload(self, "images/khinkali.jpg")
         MainSteps.file_submit(self)
-        MainSteps.check_results(self)
+        self.assertTrue(MainSteps.check_results(self))
+        MainSteps.tearDown(self)
 
 
 
