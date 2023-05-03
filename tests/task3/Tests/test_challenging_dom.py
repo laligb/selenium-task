@@ -10,6 +10,7 @@ import unittest
 
 class TestChallengingDom(unittest.TestCase):
     def test_challenging_dom(self):
+        MainSteps.setUp(self)
         MainSteps.go_to_challenging_dom(self)
         MainSteps.find_table_row(self)
 

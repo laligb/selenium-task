@@ -30,8 +30,12 @@ class MainSteps(MainLocators):
     @allure.step
     def find_table_row(self):
         row = self.driver.find_element(*MainLocators.table_row)
-        for i in row:
-            print(i)
+        split = row.text.split()[0:6]
+        print(split)
+        for word in split:
+            self.assertEqual("0", word[-1])
+
+
 
 
 
