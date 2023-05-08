@@ -15,6 +15,7 @@ class MainSteps(MainLocators):
     def __init__(self):
         self.driver = None
 
+    @allure.step
     def setUp(self) -> None:
         driver_path = ChromeDriverManager().install()
         self.driver = webdriver.Chrome(service=Service(executable_path=driver_path))
@@ -77,6 +78,6 @@ class MainSteps(MainLocators):
         self.assertNotEqual(position_before,position_after)
 
 
-
+    @allure.step
     def tearDown(self) -> None:
         self.driver.close()
